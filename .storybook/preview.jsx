@@ -1,11 +1,12 @@
 /** @type { import('@storybook/react').Preview } */
 import { ThemeProvider } from 'styled-components';
 import '../src/styles/index.css';
+import theme from "../src/theme"
 
 export default {
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <Story />
       </ThemeProvider>
     ),
