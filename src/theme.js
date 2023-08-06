@@ -9,14 +9,20 @@ const theme = {
     light: 300,
     regular: 400,
     bold: 700,
+    semibold: 600,
   },
-  breakpoints:{
-    xs:"576px",
-    sm:"768px",
-    md:"992px",
-    lg:"1200px",
-    xl:"1400px"
-  } 
+  breakpoints: {
+    xs: '576px',
+    sm: '768px',
+    md: '992px',
+    lg: '1200px',
+    xl: '1400px',
+  },
+  color: {
+    black: '#000',
+    white: '#fff',
+    brown: '#B78620',
+  },
 };
 
 export default theme;
