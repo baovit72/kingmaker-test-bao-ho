@@ -20,7 +20,7 @@ export function Currency({ icon, value, name, width, height }) {
   return (
     <Wrapper $width={width} $height={height} $py={1} $pl={1} $pr={2} $bgColor="black">
       <Image src={icon} alt={name + ' currency icon'} height="100%" />
-      <Text $fontAlias="text" $fontSize={2} $color="white" $fontWeight="regular">
+      <Text $fontAlias="text" $fontSize={4} $color="white" $fontWeight="regular">
         {formatCurrency(value)}
       </Text>
     </Wrapper>

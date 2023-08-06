@@ -1,9 +1,11 @@
+import { CoinAmount } from './CoinAmount';
 import { Currency } from './Currency';
-import ICON_COIN from '@/assets/images/icons/icon_coin.png';
+import { DiamondAmount } from './DiamondAmount';
 
 export default {
   title: 'Currency',
   component: Currency,
 };
 
-export const Default = () => <Currency icon={ICON_COIN} name="coin" value={2000} width="156px" height='1.5rem'/>;
+export const Default = () => <DiamondAmount amount={20200}/>;
+export const Coin = () => <CoinAmount amount={20200}/>;
