@@ -3,7 +3,7 @@ import MOCK_AVATAR from '@/assets/images/avatars/avatar.png';
 import MOCK_FRAME from '@/assets/images/avatar_frames/avatar_frame_silver.png';
 
 export default {
-  title: 'User Avatar',
+  title: 'User/Avatar',
   component: Avatar,
 };
 

@@ -1,7 +1,7 @@
 import { Bet } from './Bet';
 
 export default {
-  title: 'Bet',
+  title: 'User/Bet',
   component: Bet,
 };
 

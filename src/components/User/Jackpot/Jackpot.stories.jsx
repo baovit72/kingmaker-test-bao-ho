@@ -1,7 +1,7 @@
 import { Jackpot } from './Jackpot';
 
 export default {
-  title: 'Jackpot',
+  title: 'User/Jackpot',
   component: Jackpot,
 };
 

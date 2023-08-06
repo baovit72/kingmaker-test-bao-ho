@@ -3,7 +3,7 @@ import { Currency } from './Currency';
 import { DiamondAmount } from './DiamondAmount';
 
 export default {
-  title: 'Currency',
+  title: 'User/Currency',
   component: Currency,
 };
 

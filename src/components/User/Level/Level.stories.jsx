@@ -1,7 +1,7 @@
 import { Level } from './Level';
 
 export default {
-  title: 'Level',
+  title: 'User/Level',
   component: Level,
 };
 
