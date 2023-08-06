@@ -1,0 +1,4 @@
+node_modules/
+dist/
+/virtual:/
+vite.config.js
