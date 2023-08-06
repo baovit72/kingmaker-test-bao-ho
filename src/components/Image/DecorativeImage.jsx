@@ -11,7 +11,8 @@ const Wrapper = style.div`
 `;
 
 export function DecorativeImage({ src, alt, decorators, width, height }) {
-  const decoratorImages = decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} alt="" />);
+  const decoratorImages =
+    decorators && decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} alt="" />);
   return (
     <Wrapper $width={width} $height={height}>
       <Image src={src} alt={alt} width="100%" />
