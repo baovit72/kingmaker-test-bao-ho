@@ -1,1 +1,12 @@
-{}
+{
+  "components.user.bet.text": "Bets",
+  "components.game.header.transaction.deposit.text": "Deposit",
+  "components.game.header.transaction.withdrawal.text": "Withdrawal",
+  "components.game.header.mainpage.text": "Main Page",
+  "components.game.footer.kmshop.text": "KM Shop",
+  "components.game.footer.mission.text": "Mission",
+  "components.game.footer.minigame.text": "Mini Game",
+  "components.game.footer.news.text": "News",
+  "components.game.footer.inbox.text": "Inbox",
+  "components.game.footer.ranking.text": "Ranking"
+}

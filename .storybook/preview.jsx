@@ -1,7 +1,8 @@
 /** @type { import('@storybook/react').Preview } */
 import { ThemeProvider } from 'styled-components';
 import '../src/styles/index.css';
-import theme from "../src/theme"
+import theme from '../src/theme';
+import '../src/i18n';
 
 export default {
   decorators: [
