@@ -1,6 +1,6 @@
 import { Avatar } from './Avatar';
-import MOCK_AVATAR from '@/../public/images/samples/avatars/avatar.png';
-import MOCK_FRAME from '@/../public/images/samples/avatar_frames/avatar_frame_silver.png';
+import MOCK_AVATAR from '@/assets/images/avatars/avatar.png';
+import MOCK_FRAME from '@/assets/images/avatar_frames/avatar_frame_silver.png';
 
 export default {
   title: 'User Avatar',
