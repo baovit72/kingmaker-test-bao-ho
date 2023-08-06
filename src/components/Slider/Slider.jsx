@@ -1,9 +1,9 @@
-import SliderList from './SliderList';
-import SliderTrack from './SliderTrack';
-import SliderWrapper from './SliderWrapper';
 import PropTypes from 'prop-types';
+import { SliderList } from './SliderList';
+import { SliderTrack } from './SliderTrack';
+import { SliderWrapper } from './SliderWrapper';
 
-function Slider({ children }) {
+export function Slider({ children }) {
   //Simple version of Slider
   return (
     <SliderWrapper>
@@ -17,5 +17,3 @@ function Slider({ children }) {
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Slider;

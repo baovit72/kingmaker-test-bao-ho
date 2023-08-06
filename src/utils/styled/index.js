@@ -1,2 +1,3 @@
-export { default as width } from './width';
-export { default as gridCol } from './gridCol';
+export * from './grid';
+export * from './position';
+export * from './size';

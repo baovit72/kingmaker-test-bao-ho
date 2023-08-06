@@ -1,5 +1,6 @@
-import Grid from './Grid';
+import { Grid } from "./Grid";
 
+ 
 export default {
   title: 'Grid',
   component: Grid,

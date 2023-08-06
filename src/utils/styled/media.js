@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export default ({ breakpoints }, value, generator) => {
+export const media = ({ breakpoints }, value, generator) => {
   let responsiveStyle = '';
   if (Array.isArray(value) && value.length) {
     const brLabels = Object.keys(breakpoints);

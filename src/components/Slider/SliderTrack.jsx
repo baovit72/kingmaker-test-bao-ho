@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SliderTrack = styled.div`
+export const SliderTrack = styled.div`
   width: auto;
   position: relative;
   height: auto;
@@ -10,5 +10,3 @@ const SliderTrack = styled.div`
   overflow: hidden;
   vertical-align: top;
 `;
-
-export default SliderTrack;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-const SliderWrapper = styled.div`
+export const SliderWrapper = styled.div`
   position: relative;
 `;
-export default SliderWrapper;

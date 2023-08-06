@@ -1,9 +1,9 @@
-import { width } from '@/utils/styled';
+import { maxWidth } from '@/utils/styled';
 import styled from 'styled-components';
 
-const SliderItem = styled.div`
+export const SliderItem = styled.div`
   outline: none;
-  ${width}
+  ${maxWidth}
   min-height: 1px;
   margin: 0;
   padding: 0;
@@ -11,5 +11,4 @@ const SliderItem = styled.div`
   vertical-align: top;
   white-space: normal;
 `;
-
-export default SliderItem;
+ 

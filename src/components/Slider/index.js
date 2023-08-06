@@ -1,1 +1,1 @@
-export {default as Carousel } from './Slider'
+export * from './Slider'
