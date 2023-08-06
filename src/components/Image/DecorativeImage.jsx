@@ -1,5 +1,5 @@
-import style, { styled } from 'styled-components';
-import PropTypes from 'prop-types'; 
+import style from 'styled-components';
+import PropTypes from 'prop-types';
 import { Image } from './Image';
 import { height, width } from '@/utils/styled';
 import { DecoratorImage } from './DecoratorImage';
@@ -10,16 +10,11 @@ const Wrapper = style.div`
     ${height}
 `;
 
-const MainImage = styled(Image)`
-  width: 100%;
-  height: auto;
-`;
-
-export function DecorativeImage({ src, alt, decorators }) {
-  const decoratorImages = decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} />);
+export function DecorativeImage({ src, alt, decorators, width, height }) {
+  const decoratorImages = decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} alt="" />);
   return (
-    <Wrapper>
-      <MainImage src={src} alt={alt} />
+    <Wrapper $width={width} $height={height}>
+      <Image src={src} alt={alt} width="100%" />
       {decoratorImages}
     </Wrapper>
   );
@@ -27,8 +22,8 @@ export function DecorativeImage({ src, alt, decorators }) {
 
 DecorativeImage.propTypes = {
   ...Image.propTypes,
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
+  width: PropTypes.string,
+  height: PropTypes.string,
   decorators: PropTypes.arrayOf(
     PropTypes.shape({
       src: PropTypes.string.isRequired,

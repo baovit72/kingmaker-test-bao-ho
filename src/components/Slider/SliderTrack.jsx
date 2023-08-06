@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import style from 'styled-components';
 
-export const SliderTrack = styled.div`
+export const SliderTrack = style.div`
   width: auto;
   position: relative;
   height: auto;

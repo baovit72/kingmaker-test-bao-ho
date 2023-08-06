@@ -1,7 +1,7 @@
 import { maxWidth } from '@/utils/styled';
-import styled from 'styled-components';
+import style from 'styled-components';
 
-export const SliderItem = styled.div`
+export const SliderItem = style.div`
   outline: none;
   ${maxWidth}
   min-height: 1px;
