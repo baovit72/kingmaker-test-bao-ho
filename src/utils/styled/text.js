@@ -21,3 +21,13 @@ export const color = ({ theme, $color }) =>
   css`
     color: ${theme.color[$color] || $color};
   `;
+
+export const truncate = ({ $truncate }) =>
+  $truncate &&
+  css`
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+  `;

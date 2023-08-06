@@ -1,4 +1,4 @@
-import { color, fontFamily, fontSize, fontWeight } from '@/utils/styled';
+import { color, fontFamily, fontSize, fontWeight, truncate } from '@/utils/styled';
 import style from 'styled-components';
 
 export const Text = style.span`
@@ -6,4 +6,5 @@ export const Text = style.span`
     ${fontWeight}
     ${fontSize}
     ${color}
+    ${truncate}
 `;

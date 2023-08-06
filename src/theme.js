@@ -1,6 +1,6 @@
 const theme = {
   spacing: ['0', '0.25rem', '0.5rem', '1rem', '1.5rem', '2rem'],
-  fontSize: ['0.75rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem'],
+  fontSize: ['0.25rem', '0.5rem', '0.65rem', '0.75rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem'],
   fontFamily: {
     number: 'Montserrat Alternates, sans-serif',
     text: 'Readiness, sans-serif',
@@ -9,7 +9,7 @@ const theme = {
     light: 300,
     regular: 400,
     bold: 700,
-    semibold: 600,
+    semibold: 500,
   },
   breakpoints: {
     xs: '576px',
@@ -22,6 +22,8 @@ const theme = {
     black: '#000',
     white: '#fff',
     brown: '#B78620',
+    darkbrown: '#522F02',
+    lightbrown: '#E9D645',
   },
 };
 
