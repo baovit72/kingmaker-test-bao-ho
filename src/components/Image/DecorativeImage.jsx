@@ -6,15 +6,16 @@ import { DecoratorImage } from './DecoratorImage';
 
 const Wrapper = style.div`
     position: relative;
+    filter: ${({ $customFilter }) => $customFilter || 'none'};
     ${width}
     ${height}
 `;
 
-export function DecorativeImage({ src, alt, decorators, width, height }) {
+export function DecorativeImage({ src, alt, decorators, width, height, customFilter }) {
   const decoratorImages =
     decorators && decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} alt="" />);
   return (
-    <Wrapper $width={width} $height={height}>
+    <Wrapper $width={width} $height={height} $customFilter={customFilter}>
       <Image src={src} alt={alt} width="100%" />
       {decoratorImages}
     </Wrapper>
@@ -25,6 +26,7 @@ DecorativeImage.propTypes = {
   ...Image.propTypes,
   width: PropTypes.string,
   height: PropTypes.string,
+  customFilter: PropTypes.string,
   decorators: PropTypes.arrayOf(
     PropTypes.shape({
       src: PropTypes.string.isRequired,

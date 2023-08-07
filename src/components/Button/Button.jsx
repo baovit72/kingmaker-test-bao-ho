@@ -4,6 +4,7 @@ export const Button = style.button`
     margin: 0;
     border: 0;
     background: transparent;
+    cursor: pointer;
     &:hover{
         opacity: 0.7;
     }
