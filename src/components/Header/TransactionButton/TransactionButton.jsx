@@ -1,12 +1,13 @@
 import { DecorativeImage } from '@/components/Image';
-import style from 'styled-components';
+import style, { styled } from 'styled-components';
 import BG_BUTTON_TRANSACTION from '@/assets/images/backgrounds/bg_button_transaction.png';
 import { useTranslation } from 'react-i18next';
 import { Text } from '@/components/Text';
+import { Button } from '@/components/Button';
 
-const Wrapper = style.div`
-    position: relative;
-    width: 256px; 
+const Wrapper = styled(Button)`
+  position: relative;
+  width: 256px;
 `;
 
 const TextGroup = style.div`
