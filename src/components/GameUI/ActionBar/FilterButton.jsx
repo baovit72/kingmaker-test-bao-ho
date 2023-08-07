@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import { Button } from '../Button';
+import { Button } from '../../Button';
 import PropTypes from 'prop-types';
-import { DecorativeImage } from '../Image';
+import { DecorativeImage } from '../../Image';
 
 const Wrapper = styled(Button)`
   position: relative;

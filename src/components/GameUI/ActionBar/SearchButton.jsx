@@ -1,7 +1,7 @@
 import ICON_SEARCH from '@/assets/images/icons/icon_search.png';
-import { Button } from '../Button';
+import { Button } from '../../Button';
 import { styled } from 'styled-components';
-import { DecorativeImage } from '../Image';
+import { DecorativeImage } from '../../Image';
 import { backgroundColor, margin } from '@/utils/styled';
 
 const Wrapper = styled(Button)`
