@@ -1,11 +1,11 @@
-import useAuth from '@/hooks/useAuth';
 import { Suspense } from 'react';
 import { Outlet, useRoutes } from 'react-router-dom';
 import { publicRoutes } from './public';
 import { privateRoutes } from './private';
 import { MainLayout } from '@/layouts/MainLayout';
-import { Text } from '@/components/Text';
 import { Loading } from '@/components/Loading';
+import { useSelector } from 'react-redux';
+import { selectLoggedIn } from '@/store/selectors';
 
 function App() {
   return (
@@ -18,8 +18,9 @@ function App() {
 }
 
 function AppRoutes() {
-  const { user } = useAuth();
-  const routes = [...publicRoutes, ...(user ? privateRoutes : [])];
+  const loggedIn = useSelector(selectLoggedIn);
+
+  const routes = [...publicRoutes, ...(loggedIn ? privateRoutes : [])];
 
   const root = {
     path: '/',

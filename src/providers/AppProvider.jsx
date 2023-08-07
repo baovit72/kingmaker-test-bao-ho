@@ -1,12 +1,15 @@
-import { Button } from '@/components/Elements/Button';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-import AuthProvider from './AuthProvider';
 import PropTypes from 'prop-types';
 import { Loading } from '@/components/Loading';
 import { Text } from '@/components/Text';
+import { Button } from '@/components/Button';
+import { ThemeProvider } from 'styled-components';
+import theme from '@/theme';
+import { Provider as ReduxProvider } from 'react-redux';
+import store from '@/store/configureStore';
 
 const ErrorFallback = () => {
   return (
@@ -23,9 +26,11 @@ function AppProvider({ children }) {
     <Suspense fallback={<Loading />}>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
-          <AuthProvider>
-            <Router>{children}</Router>
-          </AuthProvider>
+          <ThemeProvider theme={theme}>
+            <ReduxProvider store={store}>
+              <Router>{children}</Router>
+            </ReduxProvider>
+          </ThemeProvider>
         </HelmetProvider>
       </ErrorBoundary>
     </Suspense>
