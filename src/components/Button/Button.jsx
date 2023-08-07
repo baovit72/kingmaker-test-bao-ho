@@ -6,6 +6,7 @@ export const Button = style.button`
     background: transparent;
     cursor: pointer;
     &:hover{
-        opacity: 0.7;
+        filter: brightness(1.2);
+        opacity: 0.9;
     }
 `;
