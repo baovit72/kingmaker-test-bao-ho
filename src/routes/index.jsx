@@ -4,11 +4,13 @@ import { Outlet, useRoutes } from 'react-router-dom';
 import { publicRoutes } from './public';
 import { privateRoutes } from './private';
 import { MainLayout } from '@/layouts/MainLayout';
+import { Text } from '@/components/Text';
+import { Loading } from '@/components/Loading';
 
 function App() {
   return (
     <MainLayout>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>
     </MainLayout>
