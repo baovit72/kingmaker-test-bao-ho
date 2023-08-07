@@ -8,7 +8,7 @@ import { MainLayout } from '@/layouts/MainLayout';
 function App() {
   return (
     <MainLayout>
-      <Suspense fallback={<StandardLoading />}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
     </MainLayout>
