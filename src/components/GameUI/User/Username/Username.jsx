@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export function Username({ username }) {
   return (
-    <Text $fontAlias="text" $fontSize={3} $color="black" $fontWeight="bold" $truncate>
+    <Text $fontAlias="text" $fontSize={3} $color="white" $fontWeight="bold" $truncate>
       {username}
     </Text>
   );
