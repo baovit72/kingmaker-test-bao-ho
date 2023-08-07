@@ -21,3 +21,34 @@ export const padding = (props) => css`
   ${paddingLeft(props)}
   ${paddingRight(props)}
 `;
+
+export const marginAll = ({ theme, $margin }) =>
+  $margin && media(theme, $margin, (value) => `margin: ${theme.spacing[value]};`);
+
+export const marginX = ({ theme, $mx }) =>
+  $mx && media(theme, $mx, (value) => `margin-left: ${theme.spacing[value]}; margin-right: ${theme.spacing[value]};`);
+
+export const marginY = ({ theme, $my }) =>
+  $my && media(theme, $my, (value) => `margin-top: ${theme.spacing[value]}; margin-bottom: ${theme.spacing[value]};`);
+
+export const marginLeft = ({ theme, $ml }) =>
+  $ml && media(theme, $ml, (value) => `margin-left: ${theme.spacing[value]};`);
+
+export const marginRight = ({ theme, $mr }) =>
+  $mr && media(theme, $mr, (value) => `margin-right: ${theme.spacing[value]};`);
+
+export const marginTop = ({ theme, $mt }) =>
+  $mt && media(theme, $mt, (value) => `margin-top: ${theme.spacing[value]};`);
+
+export const marginBottom = ({ theme, $mb }) =>
+  $mb && media(theme, $mb, (value) => `margin-bottom: ${theme.spacing[value]};`);
+
+export const margin = (props) => css`
+  ${marginAll(props)}
+  ${marginX(props)}
+  ${marginY(props)}
+  ${marginLeft(props)}
+  ${marginRight(props)}
+  ${marginTop(props)}
+  ${marginBottom(props)}
+`;
