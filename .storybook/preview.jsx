@@ -8,7 +8,9 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
-        <Story />
+        <div style={{ background: '#071323', padding: "200px" }}>
+          <Story />
+        </div>
       </ThemeProvider>
     ),
   ],
