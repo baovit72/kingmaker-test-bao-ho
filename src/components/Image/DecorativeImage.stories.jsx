@@ -1,5 +1,5 @@
 import { DecorativeImage } from './DecorativeImage';
-import BG_TRANSACTION from '@/assets/images/backgrounds/bg_mb_button_deposit.png';
+import BG_TRANSACTION from '@/assets/images/backgrounds/bg_mb_button_transaction.png';
 import BG_PIG from '@/assets/images/decorators/decorator_pig.png';
 import BG_PIGCOIN from '@/assets/images/decorators/decorator_pigcoin.png';
 
