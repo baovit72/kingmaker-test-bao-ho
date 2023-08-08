@@ -1,6 +1,6 @@
 import { Image } from '@/components/Image';
 import { Text } from '@/components/Text';
-import { padding, height, width, backgroundColor } from '@/utils/styled';
+import { padding, height, width, backgroundColor, margin } from '@/utils/styled';
 import style from 'styled-components';
 import PropTypes from 'prop-types';
 import { formatCurrency } from '@/utils/format';
@@ -14,6 +14,7 @@ const Wrapper = style.div`
     ${width}
     ${height}
     ${backgroundColor}
+    ${margin}
 `;
 
 export function Currency({ icon, value, name, width, height }) {

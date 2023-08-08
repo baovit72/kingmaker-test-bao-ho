@@ -14,11 +14,11 @@ const Wrapper = style.div`
     ${height}
 `;
 
-export function Avatar({ username, avatarUrl, hasFrame, frameUrl, size = '100px' }) {
+export function Avatar({ username, avatarUrl, hasFrame, frameUrl, height = 'auto', width = 'auto' }) {
   return (
-    <Wrapper $width={size} $height={size}>
-      <StyledImage src={avatarUrl} alt={username + ' avatar'} width={'100%'} height={'100%'} />
-      {hasFrame && <AvatarFrame frameUrl={frameUrl} username={username} />}
+    <Wrapper $width={width} $height={height}>
+      <StyledImage src={avatarUrl} alt={username + ' avatar'} width={width} height={height} />
+      {hasFrame && <AvatarFrame frameUrl={frameUrl} username={username} width={width} height={height} />}
     </Wrapper>
   );
 }
@@ -28,5 +28,6 @@ Avatar.propTypes = {
   avatarUrl: PropTypes.string.isRequired,
   hasFrame: PropTypes.bool.isRequired,
   frameUrl: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
+  width: PropTypes.any.isRequired,
+  height: PropTypes.any.isRequired,
 };

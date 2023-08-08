@@ -15,13 +15,13 @@ const StyledText = styled(Text)`
   color: ${({ theme }) => theme.color.darkbrown};
 `;
 
-export function Jackpot({ amount, unit }) {
+export function Jackpot({ amount, unit, fontSize }) {
   return (
     <Wrapper>
-      <StyledText $fontAlias="text" $fontSize={7} $color="white" $fontWeight="semibold">
+      <StyledText $fontAlias="text" $fontSize={fontSize || [5, 5, 6, 7, 8]} $color="white" $fontWeight="semibold">
         {formatCurrency(amount)}
       </StyledText>
-      <StyledText $fontAlias="text" $fontSize={4} $color="white" $fontWeight="semibold">
+      <StyledText $fontAlias="text" $fontSize={fontSize || [4, 4, 5, 6, 7]} $color="white" $fontWeight="semibold">
         {unit}
       </StyledText>
     </Wrapper>
@@ -31,4 +31,5 @@ export function Jackpot({ amount, unit }) {
 Jackpot.propTypes = {
   amount: PropTypes.number.isRequired,
   unit: PropTypes.string.isRequired,
+  fontSize: PropTypes.any,
 };

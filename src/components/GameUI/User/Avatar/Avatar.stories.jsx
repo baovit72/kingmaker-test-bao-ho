@@ -8,5 +8,5 @@ export default {
 };
 
 export const Default = () => (
-  <Avatar avatarUrl={MOCK_AVATAR} username={'mock12345'} hasFrame={true} frameUrl={MOCK_FRAME} size="200px" />
+  <Avatar avatarUrl={MOCK_AVATAR} username={'mock12345'} hasFrame={true} frameUrl={MOCK_FRAME} />
 );

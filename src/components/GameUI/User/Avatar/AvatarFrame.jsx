@@ -9,11 +9,15 @@ const StyledImage = styled(Image)`
   ${left}
 `;
 
-export function AvatarFrame({ username, frameUrl }) {
-  return <StyledImage src={frameUrl} alt={username + ' avatar frame'} $top={0} $left={0} width="100%" height="100%" />;
+export function AvatarFrame({ username, frameUrl, width, height }) {
+  return (
+    <StyledImage src={frameUrl} alt={username + ' avatar frame'} $top={0} $left={0} width={width} height={height} />
+  );
 }
 
 AvatarFrame.propTypes = {
   username: PropTypes.string.isRequired,
   frameUrl: PropTypes.string.isRequired,
+  width: PropTypes.any.isRequired,
+  height: PropTypes.any.isRequired,
 };

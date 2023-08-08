@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Currency } from './Currency';
 
 export function CoinAmount({ amount }) {
-  return <Currency icon={ICON_COIN} name="coin" value={amount} width="156px" height="1.5rem" />;
+  return <Currency icon={ICON_COIN} name="coin" value={amount} width="128px" height="1.2rem" />;
 }
 
 CoinAmount.propTypes = {
