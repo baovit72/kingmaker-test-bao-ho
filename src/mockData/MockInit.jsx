@@ -14,7 +14,7 @@ export function MockInit() {
     dispatch(setGameData(ingameUserDataMock));
     dispatch(setGameList(gameListMock));
     console.log('initialized mock data');
-  }, []);
+  }, [dispatch]);
 
   return <></>;
 }
