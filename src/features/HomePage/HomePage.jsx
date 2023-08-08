@@ -8,6 +8,8 @@ import { margin } from '@/utils/styled';
 import { useSelector } from 'react-redux';
 import style, { styled } from 'styled-components';
 import BG_HOME from '@/assets/images/backgrounds/bg_home.png';
+import useMobile from '@/hooks/useMobile';
+import { Grid } from '@/components/Grid';
 
 const Wrapper = style.div`
   position: relative;
@@ -31,23 +33,60 @@ const BackgroundImage = styled(Image)`
   z-index: -1;
 `;
 
+const BannerGridItem = style.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+const GridWrapper = style.div``;
+
 export function HomePage() {
   const gameList = useSelector(selectGameList);
-  const gameCards = gameList.map(({ name, image, isFavorite }) => {
+  const isMobile = useMobile();
+
+  const renderMobileCard = ({ name, image, isFavorite }) => {
+    return (
+      <BannerGridItem key={name}>
+        <GameBanner
+          $mx={2}
+          bannerUrl={image}
+          name={name}
+          isFavorite={isFavorite}
+          width={['112px', '132px', '142px']}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        />
+      </BannerGridItem>
+    );
+  };
+
+  const renderDesktopCard = ({ name, image, isFavorite }) => {
     return (
       <GameBanner
-        $mx={2}
         key={name}
+        $mx={2}
         bannerUrl={image}
         name={name}
         isFavorite={isFavorite}
-        width={['172px', '172px', '96px', '136px', '172px']}
+        width={['90%', '90%', '112px', '136px', '172px']}
         onClick={(e) => {
           e.preventDefault();
         }}
       />
     );
-  });
+  };
+
+  const gameCards = gameList.map((data) => (isMobile ? renderMobileCard(data) : renderDesktopCard(data)));
+
+  const bannerList = isMobile ? (
+    <GridWrapper>
+      <Grid $col={[2, 2, 3]}>{gameCards.slice(0,2)}</Grid>
+    </GridWrapper>
+  ) : (
+    <Slider>{gameCards}</Slider>
+  );
 
   return (
     <Wrapper $pt={2}>
@@ -56,7 +95,7 @@ export function HomePage() {
       <ActionBarWrapper $mb={3}>
         <ActionBar />
       </ActionBarWrapper>
-      <Slider>{gameCards}</Slider>
+      {bannerList}
     </Wrapper>
   );
 }

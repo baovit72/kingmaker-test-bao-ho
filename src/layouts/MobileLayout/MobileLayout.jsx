@@ -23,7 +23,7 @@ const GameView = styled.div`
 
 const ChildrenWrapper = style.div`  
     width: 100%;
-    flex: 1;
+    flex: 1; 
     ${height}
 `;
 
