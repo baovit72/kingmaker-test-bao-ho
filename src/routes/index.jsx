@@ -6,14 +6,18 @@ import { MainLayout } from '@/layouts/MainLayout';
 import { Loading } from '@/components/Loading';
 import { useSelector } from 'react-redux';
 import { selectLoggedIn } from '@/store/selectors';
+import useMobile from '@/hooks/useMobile';
+import { MobileLayout } from '@/layouts/MobileLayout';
 
 function App() {
+  const isMobile = useMobile();
+  const Layout = isMobile ? MobileLayout : MainLayout;
   return (
-    <MainLayout>
+    <Layout>
       <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>
-    </MainLayout>
+    </Layout>
   );
 }
 
