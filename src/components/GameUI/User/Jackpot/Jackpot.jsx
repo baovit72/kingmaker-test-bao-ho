@@ -18,10 +18,10 @@ const StyledText = styled(Text)`
 export function Jackpot({ amount, unit, fontSize }) {
   return (
     <Wrapper>
-      <StyledText $fontAlias="text" $fontSize={fontSize || [5, 5, 6, 7, 8]} $color="white" $fontWeight="semibold">
+      <StyledText $fontAlias="text" $fontSize={fontSize || [6, 6, 6, 7, 8]} $color="white" $fontWeight="semibold">
         {formatCurrency(amount)}
       </StyledText>
-      <StyledText $fontAlias="text" $fontSize={fontSize || [4, 4, 5, 6, 7]} $color="white" $fontWeight="semibold">
+      <StyledText $fontAlias="text" $fontSize={fontSize || [5, 5, 5, 6, 7]} $color="white" $fontWeight="semibold">
         {unit}
       </StyledText>
     </Wrapper>

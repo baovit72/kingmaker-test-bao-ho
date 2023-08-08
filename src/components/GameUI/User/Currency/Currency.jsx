@@ -17,9 +17,9 @@ const Wrapper = style.div`
     ${margin}
 `;
 
-export function Currency({ icon, value, name, width, height }) {
+export function Currency({ icon, value, name, width, height, ...props }) {
   return (
-    <Wrapper $width={width} $height={height} $py={1} $pl={1} $pr={2} $bgColor="black">
+    <Wrapper $width={width} $height={height} $py={1} $pl={1} $pr={2} $bgColor="black" {...props}>
       <Image src={icon} alt={name + ' currency icon'} height="100%" />
       <Text $fontAlias="text" $fontSize={4} $color="white" $fontWeight="regular">
         {formatCurrency(value)}

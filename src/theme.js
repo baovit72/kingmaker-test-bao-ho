@@ -20,6 +20,7 @@ const theme = {
   },
   color: {
     black: '#000',
+    darkbg: '#000207',
     white: '#fff',
     brown: '#B78620',
     darkbrown: '#522F02',

@@ -38,6 +38,9 @@ const StyledContainer = styled(Container)`
   height: 100%;
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   ${padding}
 `;
 
@@ -58,21 +61,15 @@ const JackpotWrapper = style.div`
 const LeftSection = style.div`
    height: 72%;
    display: flex;
-   align-items: center;
-   position: absolute;
-   left: 2%;
-   top: 50%;
-   transform: translateY(-50%);
+   align-items: center; 
+    
 `;
 
 const RightSection = style.div`
    height: 72%;
    display: flex;
-   align-items: center;
-   position: absolute;
-   right: 2%;
-   top: 50%;
-   transform: translateY(-50%);
+   align-items: center; 
+    
 `;
 
 export function Header() {
@@ -111,6 +108,7 @@ export function Header() {
               amount={coins}
               height={['18px', '18px', '18px', '24px', '28px']}
               width={['18px', '18px', '96px', '128px', '172px']}
+              $mb={2}
             />
             <DiamondAmount
               amount={diamonds}

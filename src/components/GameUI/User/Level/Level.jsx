@@ -1,5 +1,5 @@
 import { Text } from '@/components/Text';
-import { backgroundColor, padding } from '@/utils/styled';
+import { backgroundColor, margin, padding } from '@/utils/styled';
 import style from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -11,11 +11,12 @@ const Wrapper = style.div`
     width: fit-content;
     ${padding}
     ${backgroundColor}
+    ${margin}
 `;
 
-export function Level({ value }) {
+export function Level({ value, ...props }) {
   return (
-    <Wrapper $py={1} $px={2} $bgColor="black">
+    <Wrapper $py={1} $px={2} $bgColor="black" {...props}>
       <Text $fontAlias="text" $fontSize={2} $color="white" $fontWeight="regular">
         Lv.{value}
       </Text>

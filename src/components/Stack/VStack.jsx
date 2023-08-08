@@ -5,6 +5,7 @@ export const VStack = style.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    position: relative;
     ${width}
     ${height}
     ${padding}
