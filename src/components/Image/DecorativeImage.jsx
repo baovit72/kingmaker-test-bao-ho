@@ -16,7 +16,7 @@ export function DecorativeImage({ src, alt, decorators, width, height, customFil
     decorators && decorators.map((decorator, index) => <DecoratorImage key={index} {...decorator} alt="" />);
   return (
     <Wrapper $width={width} $height={height} $customFilter={customFilter}>
-      <Image src={src} alt={alt} width="100%" />
+      {src && <Image src={src} alt={alt} width="100%" />}
       {decoratorImages}
     </Wrapper>
   );

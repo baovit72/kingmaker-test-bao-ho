@@ -7,6 +7,7 @@ import DECORATOR_GEM from '@/assets/images/decorators/decorator_gem.png';
 import PropTypes from 'prop-types';
 import { RedDotWrapper } from '../../RedDot/RedDotWrapper';
 import { RedDot } from '../../RedDot';
+import { width } from '@/utils/styled';
 
 const Wrapper = styled(Button)`
   position: relative;
@@ -14,15 +15,17 @@ const Wrapper = styled(Button)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${width}
 `;
 
-export function RewardButton({ isHiglighted }) {
+export function RewardButton({ isHiglighted, width, height }) {
   return (
-    <Wrapper>
+    <Wrapper $width={width || '256px'}>
       <DecorativeImage
         src={''}
         alt={'reward button'}
         width="100%"
+        height={height || '256px'}
         decorators={[
           {
             src: ICON_REWARD,
@@ -33,13 +36,13 @@ export function RewardButton({ isHiglighted }) {
           {
             src: DECORATOR_GEM,
             width: '82%',
-            top: '64%',
+            top: '10%',
             left: '9%',
           },
           {
             src: ICON_REWARD_TEXT,
             width: '100%',
-            top: '272%',
+            top: '20%',
             left: '0',
           },
         ]}
@@ -55,4 +58,6 @@ export function RewardButton({ isHiglighted }) {
 
 RewardButton.propTypes = {
   isHiglighted: PropTypes.bool,
+  width: PropTypes.any,
+  height: PropTypes.any,
 };

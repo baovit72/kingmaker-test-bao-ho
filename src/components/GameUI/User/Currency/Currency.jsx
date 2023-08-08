@@ -32,6 +32,6 @@ Currency.propTypes = {
   icon: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
+  width: PropTypes.any.isRequired,
+  height: PropTypes.any.isRequired,
 };
