@@ -20,7 +20,7 @@ export function FooterButton({ icon, text, isHighlighted, width, fontSize }) {
   return (
     <Wrapper $width={width}>
       <DecorativeImage src={icon} alt={text} width="82%" />
-      <Text $fontAlias="text" $color="white" $fontWeight="semibold" $fontSize={fontSize}>
+      <Text $fontAlias="text" $color="white" $fontWeight="semibold" $fontSize={fontSize} $truncate>
         {text}
       </Text>
       {isHighlighted && (

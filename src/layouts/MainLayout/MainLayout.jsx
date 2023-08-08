@@ -4,6 +4,7 @@ import { Footer } from './Footer';
 import PropTypes from 'prop-types';
 import BG_MAIN from '@/assets/images/backgrounds/bg_main.jpg';
 import { Container } from '@/components/Container';
+import { height } from '@/utils/styled';
 
 const Wrapper = style.div`
     display: flex;
@@ -18,18 +19,19 @@ const Wrapper = style.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 0;
   `;
 
 const GameView = styled(Container)`
   display: flex;
   flex-direction: column;
-  max-height: 800px;
   border-radius: 12px;
   overflow: hidden;
 `;
 
 const ChildrenWrapper = style.div`  
     width: 100%;
+    ${height}
 `;
 
 export function MainLayout({ children }) {
@@ -37,7 +39,7 @@ export function MainLayout({ children }) {
     <Wrapper>
       <GameView>
         <Header />
-        <ChildrenWrapper>{children}</ChildrenWrapper>
+        <ChildrenWrapper $height={['240px', '240px', '240px', '280px', '360px']}>{children}</ChildrenWrapper>
         <Footer />
       </GameView>
     </Wrapper>

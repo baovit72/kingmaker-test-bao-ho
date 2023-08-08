@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import style from 'styled-components';
 
 const StyledImage = style.img`
+    user-select:none;
+    pointer-events:none;
     ${width}
     ${height}
 `;

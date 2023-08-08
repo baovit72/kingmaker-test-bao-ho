@@ -105,8 +105,9 @@ export function Footer() {
   const renderFooterItem = ({ name, icon }) => {
     return (
       <FooterButton
-        width={['96px', '96px', '96px', '138px']}
-        $fontSize={[2, 2, 2, 3, 4]}
+        key={name}
+        width={['72px', '72px', '72px', '124px', '138px']}
+        $fontSize={[1, 1, 1, 3, 4]}
         icon={icon}
         text={t(`components.game.footer.${name}.text`)}
         isHighlighted={redDot[name]}
@@ -115,15 +116,15 @@ export function Footer() {
   };
 
   return (
-    <Wrapper $height={['48px', '64px', '96px', '132px', '172px']}>
+    <Wrapper $height={['48px', '86px', '112px', '132px', '172px']}>
       <BackgroundImage src={BG_FOOTER} alt="footer background" width="auto" height="100%" />
       <StyledContainer $py={3} $px={3}>
         <LeftSection>{leftSectionData.map(renderFooterItem)}</LeftSection>
         <RewardButtonWrapper>
           <RewardButton
             isHiglighted={redDot['rewards']}
-            width={['256px', '128px', '128px', '240px', '320px']}
-            height={['256px', '128px', '128px', '240px', '320px']}
+            width={['256px', '128px', '210px', '240px', '320px']}
+            height={['256px', '128px', '210px', '240px', '320px']}
           />
         </RewardButtonWrapper>
         <RightSection>{rightSectionData.map(renderFooterItem)}</RightSection>

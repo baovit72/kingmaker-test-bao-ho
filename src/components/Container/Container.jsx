@@ -8,6 +8,6 @@ const StyledContainer = style.div`
 
 export function Container(props) {
   return (
-    <StyledContainer {...props} $width={['100%', '540px', '720px', '960px', '1140px', '1320px']}></StyledContainer>
+    <StyledContainer {...props} $width={['100%', '540px', '800px', '960px', '1140px', '1320px']}></StyledContainer>
   );
 }

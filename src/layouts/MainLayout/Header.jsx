@@ -87,7 +87,7 @@ export function Header() {
   const jackpot = useSelector(selectCurrentJackpot) || 0;
 
   return (
-    <Wrapper $height={['48px', '64px', '72px', '96px', '112px']}>
+    <Wrapper $height={['48px', '64px', '72px', '96px', '132px']}>
       <BackgroundImage src={BG_HEADER} alt="header background" width="auto" height="100%" />
       <StyledContainer $py={3} $px={3}>
         <LeftSection>
@@ -120,12 +120,12 @@ export function Header() {
           </VStack>
         </LeftSection>
         <RightSection>
-          <TransactionButton fontSize={[2, 2, 2, 2, 4]} width={['72px', '92px', '112px', '164px', '198px']} />
+          <TransactionButton fontSize={[2, 2, 2, 2, 4]} width={['72px', '92px', '148px', '164px', '198px']} />
           <MainPageButton
             $ml={3}
             width={['48px', '48px', '52px', '58px', '72px']}
             height={['48px', '48px', '52px', '58px', '72px']}
-            fontSize={[2, 2, 2, 2, 3]}
+            fontSize={[1, 1, 1, 2, 3]}
           />
           <KebabButton $ml={3} width={['18px', '24px', '28px', '32px']} height={['18px', '24px', '28px', '32px']} />
         </RightSection>

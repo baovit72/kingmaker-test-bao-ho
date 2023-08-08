@@ -30,6 +30,7 @@ export function RewardButton({ isHiglighted, width, height }) {
           {
             src: ICON_REWARD,
             width: '50%',
+            height: 'auto',
             top: '0',
             left: '25%',
           },
@@ -38,11 +39,13 @@ export function RewardButton({ isHiglighted, width, height }) {
             width: '82%',
             top: '10%',
             left: '9%',
+            height: 'auto',
           },
           {
             src: ICON_REWARD_TEXT,
             width: '100%',
             top: '20%',
+            height: 'auto',
             left: '0',
           },
         ]}

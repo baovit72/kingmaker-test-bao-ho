@@ -24,8 +24,8 @@ export function DecorativeImage({ src, alt, decorators, width, height, customFil
 
 DecorativeImage.propTypes = {
   ...Image.propTypes,
-  width: PropTypes.string,
-  height: PropTypes.string,
+  width: PropTypes.any,
+  height: PropTypes.any,
   customFilter: PropTypes.string,
   decorators: PropTypes.arrayOf(
     PropTypes.shape({
